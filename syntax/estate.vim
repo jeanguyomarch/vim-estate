@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: Estate
 " Maintainer: Jean Guyomarc'h
-" Last Change: 2015 08 19
+" Last Change: 2015 08 24
 
 " For version 5.x: Clear all syntax items
 " Greater than 6.x: Quit when a syntax file was already loaded
@@ -13,7 +13,7 @@ endif
 
 syn sync fromstart
 
-syn keyword estBlock transitions model states enterer exiter
+syn keyword estBlock transitions model states enterer exiter cb
 
 syn keyword estLabel func data contained
 syn match estLabelMatch "\w\+:" contains=estLabel
@@ -28,6 +28,7 @@ syn region estCommentLines start="\/\*" end="\*\/" contains=@estTodoGroup
 syn match estCommentLines /\/\*.*\*\//
 
 syn match estTransit "\->"
+syn match estTransit ">"
 
 hi def link estBlock            StorageClass
 hi def link estLabel            Label
